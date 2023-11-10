@@ -1,0 +1,26 @@
+context {
+    directory = "C:\Users\Admin\Desktop"
+}
+
+movie "" {
+    meta {
+        input = "yt_video.mp4"
+        format = "mp4"
+    }
+
+    # 01:45:56.45
+    intro = clip 00:00 47.45
+
+    intro.rotate 90 # Rotate the "intro" clip 90º
+
+    sections = clip every 00:10:00 # Create a new video section every 10 minutos of video
+    for clip in sections {
+        clip.dim 
+    }
+
+    *.ro
+
+    save []
+
+
+} 
